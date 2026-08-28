@@ -1,4 +1,4 @@
-# Awesome Tracking Performance Drift in LLMs
+# Tracking Performance Drift in Large Language Models Across Successive Version Updates
 
 A curated research collection focused on detecting, measuring, and understanding performance drift in large language models (LLMs). This repository brings together research papers, datasets, tools, benchmarks, and implementations for monitoring how LLM behavior and reliability change over time.
 
