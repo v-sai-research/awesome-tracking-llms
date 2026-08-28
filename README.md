@@ -186,12 +186,11 @@ For the complete bibliographic information and citation collection, see [`refere
 
 Datasets useful for evaluating LLM behavior, robustness, factuality, and performance changes are documented in [`datasets/datasets.md`](datasets/datasets.md).
 
-Each entry includes:
+1)LLMDrift Dataset from Chen, Zaharia & Zou / Stanford
 
-- **Dataset name and source**
-- **Description**
-- **Potential use for drift analysis**
-- **Access link**
+2)HELM Benchmark Suite from Stanford Center for Research on Foundation Models (CRFM)
+
+3)MTEB (Massive Text Embedding Benchmark)	from Hugging Face / MTEB
 
 ## Tools and Libraries
 
