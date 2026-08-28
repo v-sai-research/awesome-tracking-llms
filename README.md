@@ -196,13 +196,27 @@ Datasets useful for evaluating LLM behavior, robustness, factuality, and perform
 
 This repository collects software useful for evaluating and monitoring LLMs, including evaluation frameworks, experiment-management tools, observability platforms, and statistical analysis libraries.
 
+| Tool | Purpose | Relevance |
+|---|---|---|
+| **OpenAI Evals** | Framework for running standardized and custom LLM evaluations. | Provides consistent evaluations for comparing model performance across versions and time. |
+| **DeepEval** | LLM testing framework with metrics for correctness, relevance, hallucination, and regression testing. | Helps detect behavioral and performance regressions after model or prompt changes. |
+| **Ragas** | Evaluation framework for LLM and RAG applications. | Enables tracking of generation and retrieval quality across different evaluation periods. |
+| **SciPy** | Python library for statistical analysis and hypothesis testing. | Supports statistical validation of whether observed performance changes represent significant drift. |
+| **MLflow** | Experiment tracking and model evaluation platform. | Stores and compares evaluation metrics across experiments, model versions, and time periods. |
+
 See [`tools/tools.md`](tools/tools.md) for the curated collection and descriptions.
 
 ## GitHub Implementations
 
 Existing open-source implementations relevant to LLM evaluation, benchmarking, monitoring, and drift detection are documented in [`implementations/github-repositories.md`](implementations/github-repositories.md).
 
-The collection prioritizes projects that are actively maintained, relevant to the research topic, and useful for reproducing or extending research experiments.
+| Repository | What It Implements | Why It Is Relevant |
+|---|---|---|
+| **openai/evals** | Reusable framework for standardized and custom LLM evaluations. | Provides a consistent evaluation pipeline for longitudinal model comparison. |
+| **confident-ai/deepeval** | Automated LLM evaluation, testing, and regression detection. | Useful for identifying changes in correctness, relevance, hallucination, and other behaviors. |
+| **vibrantlabsai/ragas** | Evaluation of RAG and LLM applications using quality and retrieval metrics. | Helps identify performance changes in both generation and retrieval components. |
+| **saranshhalwai/drift-detector** | Proof-of-concept system that establishes a baseline, re-evaluates an LLM, calculates drift, and tracks historical changes. | Directly supports longitudinal LLM drift detection using baseline-versus-current comparisons. |
+| **egnaro9/model-drift** | Lightweight LLM regression tracker using a fixed evaluation suite and multiple behavioral metrics. | Useful for reproducible monitoring of accuracy, latency, reliability, verbosity, and refusal behavior over time. |
 
 ## Tutorials and Learning Resources
 
