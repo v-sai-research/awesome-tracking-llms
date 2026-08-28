@@ -200,7 +200,7 @@ This repository collects software useful for evaluating and monitoring LLMs, inc
 |---|---|---|
 | **OpenAI Evals** | Framework for running standardized and custom LLM evaluations. | Provides consistent evaluations for comparing model performance across versions and time. |
 | **DeepEval** | LLM testing framework with metrics for correctness, relevance, hallucination, and regression testing. | Helps detect behavioral and performance regressions after model or prompt changes. |
-| **Ragas** | Evaluation framework for LLM and RAG applications. | Enables tracking of generation and retrieval quality across different evaluation periods. |
+| **Arize Phoenix** | Open-source observability evaluation platform for LLM applications. | supports tracing, evaluation, hallucination detection, relevance analysis, and other LLM quality metrics. |
 | **SciPy** | Python library for statistical analysis and hypothesis testing. | Supports statistical validation of whether observed performance changes represent significant drift. |
 | **MLflow** | Experiment tracking and model evaluation platform. | Stores and compares evaluation metrics across experiments, model versions, and time periods. |
 
