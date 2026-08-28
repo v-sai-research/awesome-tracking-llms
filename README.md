@@ -40,32 +40,57 @@ The references and major claims used in this repository and accompanying researc
 
 ## Curated Research Papers
 
-Research papers are organized into categories relevant to tracking LLM performance drift.
+The following papers provide key perspectives on how LLM performance and behavior can change over time, across interaction settings, and across different tasks.
 
-### LLM Evaluation and Benchmarking
+### 1. Temporal Performance and Behavioral Drift
 
-- Papers on systematic evaluation of LLM capabilities.
-- Benchmark design and longitudinal evaluation methods.
-- Automated and model-based evaluation approaches.
+- **Chen, L., Zaharia, M., & Zou, J. (2024). _How Is ChatGPT’s Behavior Changing Over Time?_**  
+  *Harvard Data Science Review, 6.*  
+  This study directly investigates changes in ChatGPT's behavior over time by evaluating the model on multiple tasks and comparing performance across different periods. It provides important evidence that LLM behavior can change even without users explicitly changing their prompts or evaluation procedures.  
+  [DOI](https://doi.org/10.1162/99608f92.5317da47)
 
-### Distribution Shift and Drift Detection
+### 2. Multi-Turn Interaction and Context Drift
 
-- Research on detecting changes in data distributions.
-- Methods for identifying shifts between training and deployment environments.
-- Statistical approaches to monitoring model behavior.
+- **Dongre, V., Rossi, R. A., Lai, V. D., et al. (2025). _Drift No More? Context Equilibria in Multi-Turn LLM Interactions._**  
+  *arXiv.*  
+  This work examines changes in LLM behavior during multi-turn interactions and introduces the idea of context equilibria. It is particularly relevant to understanding how accumulated conversational context can influence model behavior and potentially contribute to observed performance drift.  
+  [DOI](https://doi.org/10.48550/arXiv.2510.07777)
 
-### LLM Reliability and Robustness
+### 3. General LLM Capability and Performance Evaluation
 
-- Studies of factuality, consistency, robustness, and reliability.
-- Research examining changes in model behavior under different conditions.
+- **Liu, M., Liu, R., Zhu, Y., et al. (2024). _A Survey on the Real Power of ChatGPT._**  
+  *arXiv.*  
+  This survey reviews the capabilities and limitations of ChatGPT across different application areas and evaluation settings. It provides broader context for understanding how LLM performance should be measured and compared across tasks and models.  
+  [DOI](https://doi.org/10.48550/arXiv.2405.00704)
 
-### LLM Monitoring and Production Evaluation
+### 4. Reliability, Uncertainty, and Robustness
 
-- Methods for monitoring deployed LLM systems.
-- Observability and continuous evaluation techniques.
-- Research on detecting regressions following model or system updates.
+- **Pelrine, K., Imouza, A., Thibault, C., et al. (2023). _Towards Reliable Misinformation Mitigation: Generalization, Uncertainty, and GPT-4._**  
+  *arXiv.*  
+  This research examines GPT-4's reliability in misinformation-related tasks, focusing on generalization and uncertainty. It is relevant to performance-drift research because changes in reliability and uncertainty can provide important signals when monitoring LLM behavior across different datasets and deployment conditions.  
+  [DOI](https://doi.org/10.48550/arXiv.2305.14928)
 
-See the complete reference collection in [`references/references.md`](references/references.md).
+### 5. Task-Specific Performance and Programming
+
+- **Tian, H., Lu, W., Li, T. O., et al. (2023). _Is ChatGPT the Ultimate Programming Assistant – How Far Is It?_**  
+  *arXiv.*  
+  This study evaluates ChatGPT's effectiveness as a programming assistant across different programming tasks. It demonstrates the importance of task-specific evaluation when assessing LLM performance and provides a useful reference for tracking changes in coding-related capabilities over time.  
+  [DOI](https://doi.org/10.48550/arXiv.2304.11938)
+
+### Research Themes
+
+Together, these papers cover several important dimensions of LLM performance drift:
+
+| Research Theme | Relevant Papers |
+|---|---|
+| **Behavioral change over time** | Chen et al. (2024) |
+| **Multi-turn/context effects** | Dongre et al. (2025) |
+| **General capability evaluation** | Liu et al. (2024) |
+| **Reliability and uncertainty** | Pelrine et al. (2023) |
+| **Task-specific performance** | Tian et al. (2023) |
+
+For the complete bibliographic information and citation collection, see [`references/references.md`](references/references.md).
+
 
 ## Datasets
 
@@ -92,14 +117,64 @@ The collection prioritizes projects that are actively maintained, relevant to th
 
 ## Tutorials and Learning Resources
 
-Recommended learning resources include:
+The following resources provide practical and theoretical guidance for learning about LLM evaluation, model monitoring, behavioral changes, and performance drift.
 
-- LLM evaluation and benchmarking tutorials
-- Documentation for LLM evaluation frameworks
-- Lectures and courses on machine learning evaluation
-- Resources on distribution shift and concept drift
-- Benchmark documentation and research guides
-- Tutorials on statistical monitoring and experiment design
+### LLM Evaluation
+
+- **Stanford HELM — Holistic Evaluation of Language Models**  
+  A comprehensive framework for evaluating language models across multiple scenarios, models, and metrics. HELM is particularly useful for understanding how to design systematic and reproducible LLM evaluations.  
+  [HELM](https://crfm.stanford.edu/helm/index.html) SStanford CRFM
+
+
+- **HELM Instruct — Instruction-Following Evaluation**  
+  A practical example of multidimensional LLM evaluation using criteria such as helpfulness, completeness, conciseness, and harmlessness.  
+  [HELM Instruct](https://crfm.stanford.edu/helm/instruct/latest/) SStanford CRFM+1
+
+
+- **Hugging Face Evaluate Documentation**  
+  A hands-on guide to evaluating machine-learning models and datasets using metrics, comparisons, and measurements. It includes tutorials, how-to guides, and conceptual material.  
+  [Hugging Face Evaluate](https://huggingface.co/docs/evaluate/) HHugging Face+1
+
+
+- **Hugging Face Lighteval**  
+  An evaluation toolkit designed specifically for LLMs. It supports multiple backends and provides detailed sample-level evaluation results, making it useful for repeated and comparative evaluations.  
+  [Lighteval Documentation](https://huggingface.co/docs/lighteval/) HHugging Face
+
+
+### Model Monitoring and Drift
+
+- **Google Machine Learning Crash Course — Production ML Systems: Monitoring**  
+  Introduces production ML monitoring, including monitoring data, model quality, training-serving skew, and real-world performance. These concepts provide a strong foundation for understanding LLM performance monitoring.  
+  [Production ML Systems: Monitoring](https://developers.google.com/machine-learning/crash-course/production-ml-systems/monitoring) GGoogle for Developers
+
+
+- **Evidently — Data and ML Checks**  
+  A practical introduction to monitoring machine-learning systems, including prediction quality, data quality, and data/prediction drift. The concepts are directly applicable to monitoring changes in LLM inputs and outputs.  
+  [Evidently ML Monitoring Quickstart](https://docs.evidentlyai.com/quickstart_ml) DDocumentation
+
+
+- **Evidently — Data Drift Methods**  
+  Explains methods for detecting distribution changes and using drift as a signal when monitoring model performance, particularly when ground-truth labels are unavailable.  
+  [Data Drift Documentation](https://docs.evidentlyai.com/metrics/preset_data_drift) DDocumentation
+
+
+### Practical LLM Evaluation Tutorials
+
+- **Evidently — LLM Evaluation Tutorials**  
+  Provides end-to-end tutorials covering LLM evaluation, LLM-as-a-judge, RAG evaluation, LLM-as-a-jury, and different LLM evaluation methods.  
+  [Evidently Tutorials and Guides](https://docs.evidentlyai.com/examples/introduction) DDocumentation
+
+
+- **Hugging Face Evaluate — Using the Evaluator**  
+  Shows how to evaluate a model using a model, dataset, and metric, with support for tasks including text generation, question answering, summarization, and classification.  
+  [Using the Evaluator](https://huggingface.co/docs/evaluate/en/base_evaluator) HHugging Face
+
+
+- **Hugging Face Evaluate — Evaluation Suites**  
+  Demonstrates how to combine multiple evaluation tasks into a single evaluation suite. This is particularly useful for longitudinal testing where several performance dimensions need to be tracked simultaneously.  
+  [Creating an EvaluationSuite](https://huggingface.co/docs/evaluate/main/en/evaluation_suite) HHugging Face
+
+
 
 ## Repository Structure
 
