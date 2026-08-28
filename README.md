@@ -174,6 +174,13 @@ The following resources provide practical and theoretical guidance for learning 
   Demonstrates how to combine multiple evaluation tasks into a single evaluation suite. This is particularly useful for longitudinal testing where several performance dimensions need to be tracked simultaneously.  
   [Creating an EvaluationSuite](https://huggingface.co/docs/evaluate/main/en/evaluation_suite) HHugging Face
 
+## License
+
+This repository is licensed under the [MIT License](LICENSE).
+
+You are free to use, modify, and distribute the original content of this repository, subject to the terms of the MIT License.
+
+Third-party papers, datasets, tools, and other resources referenced in this repository remain subject to their respective licenses and terms of use.
 
 
 ## Repository Structure
